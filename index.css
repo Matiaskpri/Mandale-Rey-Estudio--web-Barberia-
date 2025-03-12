@@ -1,0 +1,256 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #f5f5f5, #ddd);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Fondo para el main */
+main {
+    background: url('./img/pxfuel.jpg') center/cover fixed no-repeat;
+    padding: 40px 0;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #222, #444);
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    height: 300px;
+    overflow: hidden;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo h1 a{
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo-img {
+    max-width: 120px;
+    margin-bottom: 10px;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes slideDown {
+    from {
+        background-position: center top;
+    }
+    to {
+        background-position: center bottom;
+    }
+}
+
+header::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./img/estudiar-barberia.jpg') center top/cover no-repeat;
+    animation: slideDown 2s ease-in-out forwards;
+}
+
+nav ul {
+    z-index: 2;
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Secciones */
+section {
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+    margin: 20px auto;
+    width: 75%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+/* Sección de Inicio */
+#inicio {
+    animation: fadeIn 1.5s ease-in-out;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    padding: 60px;
+    width: 85%;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para el contenedor del reproductor */
+#reproductor {
+    display: flex;
+    justify-content: center; /* Centra el reproductor en la página */
+    align-items: center;
+    padding: 20px; /* Espacio interno alrededor del reproductor */
+    background-color: #f0f0f0; /* Fondo suave para el área del reproductor */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor */
+    margin-top: 20px; /* Espacio superior para separar del contenido anterior */
+    max-width: 240px; /* Máximo ancho */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para el iframe */
+#reproductor iframe {
+    border-radius: 8px; /* Bordes redondeados para el iframe */
+    width: 100%; /* Hace que el iframe ocupe todo el ancho del contenedor */
+    height: 52px; /* Mantiene la altura original */
+    max-width: 220px; /* Asegura que no crezca más allá del tamaño ideal */
+}
+
+/* Sección de Galería */
+#galeria {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 45px;
+    width: 70%;
+}
+
+/* Sección de Servicios */
+#servicios {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    padding: 45px;
+    width: 70%;
+}
+
+/* Sección de Contacto */
+#contacto {
+    background: linear-gradient(135deg, #1d976c, #93f9b9);
+    color: white;
+    padding: 45px;
+    width: 70%;
+}
+
+/* Estilos para el contenedor de imágenes principales */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Estilos para la galería de imágenes principales */
+.imagen-principal img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+/* Estilos para la galería de imágenes principales */
+.imagen-principal img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Estilos para el contenedor de miniaturas */
+.miniaturas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas para las miniaturas */
+    gap: 10px; /* Espacio entre las miniaturas */
+    margin-top: 10px; /* Separación de las miniaturas con las imágenes principales */
+}
+
+/* Estilos para las imágenes de miniaturas */
+.miniatura img {
+    width: 70%; /* Las miniaturas ocupan solo el 80% del ancho de su contenedor */
+    height: auto;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+    margin: 0 auto; /* Centra las miniaturas dentro de su contenedor */
+}
+
+.miniatura img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+}
+
+/* Botones */
+button {
+    background: #ff7e5f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e0634f;
+}
+
+/* Pie de página */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
