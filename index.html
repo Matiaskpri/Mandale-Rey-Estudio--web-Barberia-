@@ -7,6 +7,8 @@
     <title>Mandale Rey</title>
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <!------------>
@@ -30,20 +32,26 @@
     <main>
         <!-- Sección de Inicio -->
         <section id="inicio">
-            <h2>Bienvenidos a Peluquería Mandale Rey Barberia</h2>
-            <p>Transformando tu estilo con los mejores cortes y peinados.</p>
-            <h1>Peluquería Styles</h1>
-            <h2>Music!!</h2>
-            <audio controls autoplay>
-                <source src="https://streaming-url.com/stream.mp3" type="audio/mpeg">
-                Tu navegador no soporta el reproductor de audio.
-            </audio>
-            <div id="reproductor">
-                <iframe title="Player" allow="autoplay" id="iframe" style="padding: 0;" frameborder="0" 
-                        src="https://www.raddios.com/player/1/?r=15933&autoplay=1" 
-                        width="220" height="52" allowtransparency="true" scrolling="no">
-                </iframe>
+            <h1>Bienvenidos a Peluquería Mandale Rey Barberia</h1>
+            <h2>Transformando tu estilo con los mejores cortes y peinados.</h2>
+            <!-- Contenedor de música -->
+            <div class="music-container">
+                <h1>Peluquería Styles</h1>
+                <h2>Music!!</h2>
+                <audio controls>
+                     <source src="https://streaming-url.com/stream.mp3" type="audio/mpeg">
+                     Tu navegador no soporta el reproductor de audio.
+               </audio>
+               <hr>
+               <h3>Radio Sonidera</h3>
+               <div id="reproductor">
+                   <iframe title="Player" id="iframe" style="padding: 0;" frameborder="0" 
+                   src="https://www.raddios.com/player/1/?r=15933" 
+                   width="220" height="52" allowtransparency="true" scrolling="no">
+                   </iframe>
+                </div>
             </div>
+
         </section>
 
         <!-- Galería -->
@@ -87,15 +95,37 @@
         
 
         <!-- Servicios -->
+        <!-- Sección de Servicios -->
         <section id="servicios">
             <h2>Servicios</h2>
-            <ul>
-                <li>Corte de cabello - $[precio]</li>
-                <li>Peinados - $[precio]</li>
-                <li>Coloración - $[precio]</li>
-                <li>Afeitado - $[precio]</li>
-            </ul>
+    
+            <div class="servicios-container">
+                <!-- Video a la izquierda -->
+                <div class="video-left">
+                    <video autoplay muted loop>
+                        <source src="./img/0_Haircut_Barber_3840x2160.mp4" type="video/mp4">
+                     Tu navegador no soporta el reproductor de video.
+                    </video>
+                </div>
+        
+                <!-- Lista de servicios -->
+                <ul>
+                    <li>Corte de cabello</li>
+                    <li>Peinados</li>
+                    <li>Coloración</li>
+                    <li>Afeitado</li>
+                </ul>
+        
+                <!-- Video a la derecha -->
+                <div class="video-right">
+                    <video autoplay muted loop>
+                        <source src="./img/514964_Barbershop_Barber_1920x1080.mp4" type="video/mp4">
+                    Tu navegador no soporta el reproductor de video.
+                    </video>
+                </div>
+            </div>
         </section>
+
 
         <!-- Contacto -->
         <section id="contacto">
@@ -109,7 +139,7 @@
     <!------------>
     <!-- Pie de página --> 
     <footer>
-        <p>&copy; 2025 Peluquería [Nombre]. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Barberia Mandale Rey Estudio. Todos los derechos reservados.</p>
     </footer>  
     <!------------>    
 </body>

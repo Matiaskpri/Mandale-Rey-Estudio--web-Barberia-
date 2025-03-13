@@ -31,6 +31,51 @@ header {
     overflow: hidden;
 }
 
+/* Estilo general para todos los h1 */
+h1 {
+    font-family: 'Cinzel', serif; /* Fuente elegante y clásica */
+    font-size: 3em;
+    font-weight: bold;
+    color: #333; /* Color oscuro y sólido */
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    letter-spacing: 2px; /* Separación entre letras */
+}
+
+/* Estilo general para todos los h2 */
+h2 {
+    font-family: 'Great Vibes', cursive; /* Fuente cursiva y elegante */
+    font-size: 3em;
+    font-weight: normal;
+    color: #555; /* Color un poco más claro que el h1 */
+    text-align: center;
+    margin: 15px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    letter-spacing: 1px;
+}
+
+/* Ajustes responsivos para h1 y h2 en pantallas más pequeñas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
 .logo {
     display: flex;
     flex-direction: column;
@@ -121,6 +166,13 @@ section:hover {
 
 /* Sección de Inicio */
 #inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
     animation: fadeIn 1.5s ease-in-out;
     background: linear-gradient(135deg, #ff7e5f, #feb47b);
     color: white;
@@ -156,12 +208,56 @@ section:hover {
     margin-right: auto;
 }
 
+#inicio h3 {
+    text-align: center; /* Centrar el texto */
+    color: #fff; /* Color blanco */
+    margin-bottom: 10px; /* Separación con el iframe */
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    font-size: 1.2em; /* Tamaño de la fuente */
+    background-color: #333; /* Fondo oscuro */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
 /* Estilo para el iframe */
 #reproductor iframe {
     border-radius: 8px; /* Bordes redondeados para el iframe */
     width: 100%; /* Hace que el iframe ocupe todo el ancho del contenedor */
     height: 52px; /* Mantiene la altura original */
     max-width: 220px; /* Asegura que no crezca más allá del tamaño ideal */
+}
+
+/* Contenedor de música */
+.music-container {
+    background-color: #333; /* Fondo oscuro para resaltar */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px; /* Bordes redondeados para un toque elegante */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    text-align: center;
+    max-width: 500px; /* Ancho máximo para centrado */
+}
+
+/* Estilo para los títulos */
+.music-container h1, .music-container h2 {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    margin: 5px 0;
+    color: #ffd700; /* Texto claro */
+}
+
+/* Efecto hover para el contenedor */
+.music-container:hover {
+    background-color: #444; /* Un tono más claro al pasar el mouse */
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para el reproductor */
+#reproductor {
+    margin-top: 10px;
+}
+
+audio {
+    margin: 10px 0;
 }
 
 /* Sección de Galería */
@@ -178,6 +274,64 @@ section:hover {
     color: white;
     padding: 45px;
     width: 70%;
+}
+
+/* Contenedor de servicios */
+.servicios-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #181717;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los videos */
+.video-left, .video-right {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo para la lista de servicios */
+.servicios-container ul {
+    flex: 2;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.servicios-container ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #726f6f;
+}
+
+/* Estilo para los videos */
+.servicios-container video {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste para dispositivos móviles */
+@media (max-width: 768px) {
+    .servicios-container {
+        flex-direction: column; /* Colocar videos y lista en columna */
+        align-items: flex-start;
+    }
+
+    .video-left, .video-right {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .servicios-container ul {
+        width: 100%;
+    }
 }
 
 /* Sección de Contacto */
