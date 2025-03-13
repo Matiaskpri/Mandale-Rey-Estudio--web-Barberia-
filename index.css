@@ -176,7 +176,6 @@ section:hover {
     animation: fadeIn 1.5s ease-in-out;
     background: linear-gradient(135deg, #ff7e5f, #feb47b);
     color: white;
-    padding: 60px;
     width: 85%;
     border-radius: 12px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
