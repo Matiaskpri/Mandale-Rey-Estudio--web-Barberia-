@@ -45,14 +45,21 @@ h1 {
 
 /* Estilo general para todos los h2 */
 h2 {
-    font-family: 'Great Vibes', cursive; /* Fuente cursiva y elegante */
-    font-size: 3em;
-    font-weight: normal;
-    color: #555; /* Color un poco más claro que el h1 */
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 60px;
+    color: #242222; /* Color un poco más claro que el h1 */
     text-align: center;
     margin: 15px 0;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Sombra ligera */
     letter-spacing: 1px;
+}
+
+#inicio h2 {
+    font-size: 30px;
+    color: #555; /* Color un poco más claro que el h1 */
 }
 
 /* Ajustes responsivos para h1 y h2 en pantallas más pequeñas */
@@ -62,7 +69,7 @@ h2 {
     }
 
     h2 {
-        font-size: 1.7em;
+        font-size: 2.0em;
     }
 }
 
@@ -72,7 +79,7 @@ h2 {
     }
 
     h2 {
-        font-size: 1.5em;
+        font-size: 1.7em;
     }
 }
 
@@ -142,6 +149,10 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
 }
 
 nav ul li a:hover {
@@ -162,6 +173,11 @@ section {
 
 section:hover {
     transform: scale(1.02);
+}
+
+section a {
+    text-decoration: none;
+    color: #242222;
 }
 
 /* Sección de Inicio */
@@ -381,22 +397,6 @@ audio {
 
 .miniatura img:hover {
     transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
-}
-
-/* Botones */
-button {
-    background: #ff7e5f;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-button:hover {
-    background: #e0634f;
 }
 
 /* Pie de página */

@@ -1,0 +1,206 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #f5f5f5, #ddd);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Fondo para el main */
+main {
+    background: url('./img/pxfuel.jpg') center/cover fixed no-repeat;
+    padding: 40px 0;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #222, #444);
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* Estilo general para todos los h1 */
+h1 {
+    font-family: 'Cinzel', serif; /* Fuente elegante y clásica */
+    font-size: 3em;
+    font-weight: bold;
+    color: #333; /* Color oscuro y sólido */
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    letter-spacing: 2px; /* Separación entre letras */
+}
+
+/* Estilo general para todos los h2 */
+h2 {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 60px;
+    color: #242222; /* Color un poco más claro que el h1 */
+    text-align: center;
+    margin: 15px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    letter-spacing: 1px;
+}
+
+#inicio h2 {
+    font-size: 30px;
+    color: #555; /* Color un poco más claro que el h1 */
+}
+
+.servicios-container h2{
+    font-size: 80px;
+    margin-bottom: 25px;
+}
+
+/* Ajustes responsivos para h1 y h2 en pantallas más pequeñas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2.0em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo h1 a{
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo-img {
+    max-width: 120px;
+    margin-bottom: 10px;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes slideDown {
+    from {
+        background-position: center top;
+    }
+    to {
+        background-position: center bottom;
+    }
+}
+
+header::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./img/estudiar-barberia.jpg') center top/cover no-repeat;
+    animation: slideDown 2s ease-in-out forwards;
+}
+
+nav ul {
+    z-index: 2;
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+.servicios-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.servicio {
+    background: #e2e0e0;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.servicio h3 {
+    font-size: 40px;
+    font-weight: bolder;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: black;
+    margin-bottom: 5px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.servicio p {
+    color: #444;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Pie de página */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
